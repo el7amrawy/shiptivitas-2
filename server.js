@@ -151,12 +151,29 @@ app.put("/api/v1/clients/:id", (req, res) => {
     });
   }
 
+  const statusClients = clients.filter((client) => client.status === status);
+
+  if (
+    !statusClients.every((client) => client.priority != priority) &&
+    client.priority != priority
+  ) {
+    statusClients.forEach((client) => {
+      const stmt = db.prepare("UPDATE clients SET priority=? WHERE id=? ");
+      stmt.run(parseInt(client.priority) + 1, client.id);
+    });
+  }
+
   const stmt = db.prepare(
     "UPDATE clients SET status= ? , priority=? WHERE id=? RETURNING *"
   );
   const update = stmt.all(status, priority, client.id);
-  console.log(update);
-  return res.status(200).send(db.prepare("SELECT * FROM clients").all());
+
+  return res.status(200).send(
+    db
+      .prepare("SELECT * FROM clients")
+      .all()
+      .filter((client) => client.status === status)
+  );
 });
 
 app.listen(3001);
