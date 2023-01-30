@@ -1,36 +1,26 @@
 {
-  "name": "shiptivity-api",
+  "name": "shiptivitas-2",
   "version": "1.0.0",
-  "description": "The Backend of Shiptivity",
-  "main": "index.js",
+  "description": "<p align=\"center\">\r <a href=\"https://www.insidesherpa.com/virtual-internships/prototype/oRMogWRHeewqHzA7u/College%20Students%3A%20Learn%20how%20to%20work%20at%20a%20YC%20startup\">\r <img src=\"https://s3-ap-southeast-2.amazonaws.com/insidesherpa-assets/yc/yc-blade.png\"></a>\r <br><br>\r   <a href=\"https://www.insidesherpa.com/virtual-internships/prototype/oRMogWRHeewqHzA7u/College%20Students%3A%20Learn%20how%20to%20work%20at%20a%20YC%20startup\">\r   <img src=\"https://s3-ap-southeast-2.amazonaws.com/insidesherpa-assets/yc/workatastartup_logo_orange-c2a27f6374f9395166ee9906e2e0873af835b3c6132ae6aa0543582298567041.svg\"></a>\r </p>",
+  "main": "server.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel server.js --out-dir build",
-    "start": "babel-watch server.js"
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/insidesherpa/shiptivity-2.git"
+    "url": "git+https://github.com/el7amrawy/shiptivitas-2.git"
   },
-  "keywords": [
-    "shiptivity"
-  ],
-  "author": "juliusarden",
-  "license": "MIT",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/insidesherpa/shiptivity-2/issues"
+    "url": "https://github.com/el7amrawy/shiptivitas-2/issues"
   },
-  "homepage": "https://github.com/insidesherpa/shiptivity-2#readme",
+  "homepage": "https://github.com/el7amrawy/shiptivitas-2#readme",
   "dependencies": {
-    "better-sqlite3": "^5.4.0",
-    "express": "^4.16.4"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.2.2",
-    "@babel/preset-env": "^7.3.1",
-    "babel": "^6.23.0",
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
-    "babel-watch": "^7.0.0"
+    "better-sqlite3": "^8.0.1",
+    "express": "^4.18.2"
   }
 }
